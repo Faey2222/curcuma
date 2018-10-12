@@ -1,5 +1,5 @@
 # Curcuma UI
-Curcuma UI is a modern scalable and modulare object oriented CSS framework in early development. The goal is to create a lightweight framework with only those components really used in most websites and webapps. 
+Curcuma UI is a modern scalable and modular object oriented CSS framework in early development. The goal is to create a lightweight framework with only those components really used in most websites and webapps. 
 
 **Therefore Curcuma UI won't support any legacy browser such as Microsoft Internet Explorer 11 or lower**.
 
