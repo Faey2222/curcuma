@@ -1,0 +1,25 @@
+/*!
+ * Curcuma UI v1.0.0 (https://curcuma-ui.de/)
+ * Copyright 2018 The Curcuma UI Authors
+ * Copyright 2018 Benjamin Joshua Hood, Curry Solutions GmbH
+ * Licensed under MIT (https://github.com/faey2222/curcuma/blob/master/LICENSE)
+ */
+
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700");
+
+/*
+    > Required
+*/
+// Mixins
+@import "mixins/paddings";
+@import "mixins/margins";
+
+// Basics
+@import "reset";
+@import "variables";
+@import "base";
+@import "layout";
+
+/*
+> Partials
+*/

@@ -1,0 +1,16 @@
+/.idea/
+/node_modules/
+/.sass-cache/
+/dist/
+/grunt/
+/Gruntfile_ext.js
+/app/assets/css/
+/app/assets/js/app.min.js
+/app/assets/js/sourcemap.map
+
+app/assets/components
+app/assets/js/vendor/riot+compiler.min.js
+app/assets/js/vendor/route.min.js
+app/assets/js/dev.js
+app/index.html
+app/assets/js/vendor/jquery.min.js

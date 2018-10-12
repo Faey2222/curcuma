@@ -1,0 +1,74 @@
+.#{$ui-name-container} {
+    width: 100%;
+    padding-left: $ui-gutter / 2;
+    padding-right: $ui-gutter / 2;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.has-no-gutters {
+        @include no-paddings-x;
+    }
+}
+
+.#{$ui-name-col} {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-left: $ui-gutter / 2;
+    padding-right: $ui-gutter / 2;
+
+    &.has-no-gutters {
+        @include no-paddings-x;
+    }
+
+    @at-root .#{$ui-name-row} {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -$ui-gutter / 2;
+        margin-right: -$ui-gutter / 2;
+
+        &.has-no-gutters {
+            @include no-margins-x;
+        }
+    }
+
+    @each $bp in map-keys($ui-breakpoints) {
+        $arg: "min-width: #{map-get($ui-max-widths, $bp)}";
+        $index: index(map-keys($ui-breakpoints), $bp);
+        $next: null;
+
+        @if $index != length($ui-breakpoints) {
+            $next: map-get($ui-max-widths, nth(map-keys($ui-breakpoints), $index + 1));
+        }
+
+        @if $index == 1 {
+            $arg: "min-width: 0";
+        }
+
+        @media (#{$arg}) {
+            @at-root .#{$ui-name-container} {
+                @if $index == 1 {
+                    max-width: $next - 1;
+                }
+                @else {
+                    max-width: map-get($ui-breakpoints, $bp);
+                }
+            }
+
+            @for $i from 1 through $ui-cols {
+                @if $index == 1 {
+                    &--#{$i} {
+                        flex: 0 0 (100% / $ui-cols * $i);
+                        max-width: 100% / $ui-cols * $i;
+                    }
+                }
+                @else {
+                    &--#{$bp}-#{$i} {
+                        flex: 0 0 (100% / $ui-cols * $i);
+                        max-width: 100% / $ui-cols * $i;
+                    }
+                }
+            }
+        }
+    }
+}
