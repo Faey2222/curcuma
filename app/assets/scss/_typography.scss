@@ -1,0 +1,20 @@
+//
+// Typography
+//
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: var(--ui-size-#{$i});
+    font-weight: var(--ui-weight-normal);
+  }
+  .is-size-#{$i} {
+    font-size: var(--ui-size-#{$i}) !important;
+
+    @each $bp in map-keys($ui-breakpoints) {
+      @include breakpoint-up($bp) {
+        &-#{$bp} {
+          font-size: var(--ui-size-#{$i}) !important;
+        }
+      }
+    }
+  }
+}

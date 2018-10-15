@@ -1,0 +1,19 @@
+@function get-breakpoint($bp, $asVal) {
+  $arg: "min-width: #{map-get($ui-max-widths, $bp)}";
+  $index: index(map-keys($ui-breakpoints), $bp);
+  $next: null;
+
+  @if $index != length($ui-breakpoints) {
+    $next: map-get($ui-max-widths, nth(map-keys($ui-breakpoints), $index + 1));
+  }
+
+  @if $index == 1 {
+    $arg: "min-width: 0";
+  }
+
+  @if $asVal == true {
+    @return map-get($ui-breakpoints, $bp);
+  } @else {
+    @return $arg;
+  }
+}

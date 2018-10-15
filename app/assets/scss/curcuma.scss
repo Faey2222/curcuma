@@ -5,21 +5,47 @@
  * Licensed under MIT (https://github.com/faey2222/curcuma/blob/master/LICENSE)
  */
 
-@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Krub:300,300i,400,400i,500,500i,600,600i,700,700i");
 
-/*
-    > Required
-*/
-// Mixins
-@import "mixins/paddings";
-@import "mixins/margins";
-
-// Basics
-@import "reset";
+//
+// Import required files
+//
+@import "functions";
+@import "mixins";
 @import "variables";
-@import "base";
-@import "layout";
+@import "root";
 
-/*
-> Partials
-*/
+//
+// Base
+//
+@import "reset";
+@import "base";
+
+//
+// Layout
+//
+@import "layout";
+// @import "utilities/layout"
+
+//
+// Content
+//
+@import "typography";
+// @import "tables";
+// @import "figures";
+// @import "images";
+// @import "code";
+
+//
+// Components
+//
+// @import "alerts";
+// @import "box";
+// @import "buttons";
+// @import "button-group";
+// @import "breadcrumb";
+// @import "forms";
+// @import "navs";
+// @import "pagination";
+// @import "tags";
+// @import "tiles";

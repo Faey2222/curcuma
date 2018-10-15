@@ -1,9 +1,74 @@
-// Layout
-$ui-cols: 12;
-$ui-gutter: 30px;
-$ui-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px) !default;
-$ui-max-widths: (xs: 0, sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+// Variables
+//
+// Variables within Curcuma UI should follow this schema: '$ui-component-property-size'
 
-$ui-name-container: "container";
-$ui-name-row: "row";
-$ui-name-col: "col";
+//
+// Base
+//
+$ui-body-bg: #fff !default;
+$ui-body-color: #3a3a3a !default;
+
+//
+// Colors
+//
+$ui-black: #000 !default;
+$ui-white: #fff !default;
+$ui-gray-lighter: #dbdbdb !default;
+$ui-gray-light: #b5b5b5 !default;
+$ui-gray: #7a7a7a !default;
+$ui-gray-dark: #494949 !default;
+$ui-gray-darker: #353535 !default;
+
+$ui-orange: #ff470f !default;
+$ui-yellow: #fedd56 !default;
+$ui-green: #23d160 !default;
+$ui-turquoise: #00d1b1 !default;
+$ui-cyan: #209bee !default;
+$ui-blue: #3273dc !default;
+$ui-purple: #b76bff !default;
+$ui-red: #fe385f !default;
+
+//
+// Typography
+//
+$ui-family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Krub", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$ui-family-monospace: monospace !default;
+$ui-render-mode: optimizeLegibility !default;
+
+$ui-size-1: rem(48px) !default;
+$ui-size-2: rem(40px) !default;
+$ui-size-3: rem(32px) !default;
+$ui-size-4: rem(24px) !default;
+$ui-size-5: rem(20px) !default;
+$ui-size-6: rem(16px) !default;
+$ui-size-7: rem(12px) !default;
+
+$ui-weight-light: 300 !default;
+$ui-weight-normal: 400 !default;
+$ui-weight-medium: 500 !default;
+$ui-weight-semibold: 600 !default;
+$ui-weight-bold: 700 !default;
+
+//
+// Layout
+//
+$ui-name-container: "container" !default;
+$ui-name-row: "row" !default;
+$ui-name-col: "col" !default;
+
+$ui-cols: 12 !default;
+$ui-gutter: rem(30px) !default;
+$ui-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+$ui-max-widths: (
+  xs: 0,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;

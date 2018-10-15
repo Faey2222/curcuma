@@ -1,0 +1,42 @@
+:root {
+  // Base
+  --ui-body-bg: #{get-hsl($ui-body-bg)};
+  --ui-body-color: #{get-hsl($ui-body-color)};
+
+  //Colors
+  --ui-black: #{get-hsl($ui-black)};
+  --ui-white: #{get-hsl($ui-white)};
+  --ui-gray-lighter: #{get-hsl($ui-gray-lighter)};
+  --ui-gray-light: #{get-hsl($ui-gray-light)};
+  --ui-gray: #{get-hsl($ui-gray)};
+  --ui-gray-dark: #{get-hsl($ui-gray-dark)};
+  --ui-gray-darker: #{get-hsl($ui-gray-darker)};
+
+  --ui-orange: #{get-hsl($ui-orange)};
+  --ui-yellow: #{get-hsl($ui-yellow)};
+  --ui-green: #{get-hsl($ui-green)};
+  --ui-turquoise: #{get-hsl($ui-turquoise)};
+  --ui-cyan: #{get-hsl($ui-cyan)};
+  --ui-blue: #{get-hsl($ui-blue)};
+  --ui-purple: #{get-hsl($ui-purple)};
+  --ui-red: #{get-hsl($ui-red)};
+
+  // Typography
+  --ui-family-sans-serif: #{$ui-family-sans-serif};
+  --ui-family-monospace: #{$ui-family-monospace};
+  --ui-family-render-mode: #{$ui-render-mode};
+
+  --ui-size-1: #{$ui-size-1};
+  --ui-size-2: #{$ui-size-2};
+  --ui-size-3: #{$ui-size-3};
+  --ui-size-4: #{$ui-size-4};
+  --ui-size-5: #{$ui-size-5};
+  --ui-size-6: #{$ui-size-6};
+  --ui-size-7: #{$ui-size-7};
+
+  --ui-weight-light: #{$ui-weight-light};
+  --ui-weight-normal: #{$ui-weight-normal};
+  --ui-weight-medium: #{$ui-weight-medium};
+  --ui-weight-semibold: #{$ui-weight-semibold};
+  --ui-weight-bold: #{$ui-weight-bold};
+}
