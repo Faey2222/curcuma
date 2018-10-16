@@ -3,7 +3,25 @@
   --ui-body-bg: #{get-hsl($ui-body-bg)};
   --ui-body-color: #{get-hsl($ui-body-color)};
 
+  // Transitions
+  --ui-transition-speed: #{$ui-transition-speed};
+  --ui-transition-style: #{$ui-transition-style};
+  --ui-transition: all var(--ui-transition-speed) var(--ui-transition-style);
+
   //Colors
+  --ui-color: #{$ui-color};
+  --ui-color-inverted: #{$ui-color-inverted};
+  @include get-color-variations("ui-primary", $ui-primary);
+  @include get-color-variations("ui-secondary", $ui-secondary);
+  @include get-color-variations("ui-orange", $ui-orange);
+  @include get-color-variations("ui-yellow", $ui-yellow);
+  @include get-color-variations("ui-green", $ui-green);
+  @include get-color-variations("ui-turquoise", $ui-turquoise);
+  @include get-color-variations("ui-cyan", $ui-cyan);
+  @include get-color-variations("ui-blue", $ui-blue);
+  @include get-color-variations("ui-purple", $ui-purple);
+  @include get-color-variations("ui-red", $ui-red);
+
   --ui-black: #{get-hsl($ui-black)};
   --ui-white: #{get-hsl($ui-white)};
   --ui-gray-lighter: #{get-hsl($ui-gray-lighter)};
@@ -11,15 +29,6 @@
   --ui-gray: #{get-hsl($ui-gray)};
   --ui-gray-dark: #{get-hsl($ui-gray-dark)};
   --ui-gray-darker: #{get-hsl($ui-gray-darker)};
-
-  --ui-orange: #{get-hsl($ui-orange)};
-  --ui-yellow: #{get-hsl($ui-yellow)};
-  --ui-green: #{get-hsl($ui-green)};
-  --ui-turquoise: #{get-hsl($ui-turquoise)};
-  --ui-cyan: #{get-hsl($ui-cyan)};
-  --ui-blue: #{get-hsl($ui-blue)};
-  --ui-purple: #{get-hsl($ui-purple)};
-  --ui-red: #{get-hsl($ui-red)};
 
   // Typography
   --ui-family-sans-serif: #{$ui-family-sans-serif};
@@ -39,4 +48,11 @@
   --ui-weight-medium: #{$ui-weight-medium};
   --ui-weight-semibold: #{$ui-weight-semibold};
   --ui-weight-bold: #{$ui-weight-bold};
+
+  // Buttons
+  --ui-button-padding-x: #{$ui-button-padding-x};
+  --ui-button-padding-y: #{$ui-button-padding-y};
+
+  // Radius
+  --ui-radius: #{$ui-radius};
 }

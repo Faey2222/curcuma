@@ -61,3 +61,24 @@
     }
   }
 }
+
+.#{$ui-name-offset} {
+  @each $bp in map-keys($ui-breakpoints) {
+    $index: index(map-keys($ui-breakpoints), $bp);
+    $next: get-next($index);
+
+    @include breakpoint-up($bp) {
+      @for $i from 1 through $ui-cols - 1 {
+        @if $index == 1 {
+          &--#{$i} {
+            margin-left: 100% / $ui-cols * $i;
+          }
+        } @else {
+          &--#{$bp}-#{$i} {
+            margin-left: 100% / $ui-cols * $i;
+          }
+        }
+      }
+    }
+  }
+}

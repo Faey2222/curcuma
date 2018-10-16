@@ -40,16 +40,3 @@
 // @mixin breakpoint-between($val1, $val2) {
 
 // }
-
-@function get-next($index) {
-  @if $index != length($ui-breakpoints) {
-    $res: map-get($ui-max-widths, nth(map-keys($ui-breakpoints), $index + 1));
-    @if $res > 0 {
-      @return map-get($ui-max-widths, nth(map-keys($ui-breakpoints), $index + 1));
-    } @else {
-      @return null;
-    }
-  } @else {
-    @return null;
-  }
-}

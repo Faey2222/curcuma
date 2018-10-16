@@ -1,10 +1,12 @@
 //
 // Typography
 //
-@for $i from 1 through 6 {
-  h#{$i} {
-    font-size: var(--ui-size-#{$i});
-    font-weight: var(--ui-weight-normal);
+@for $i from 1 through 7 {
+  @if $i != 7 {
+    h#{$i} {
+      font-size: var(--ui-size-#{$i});
+      font-weight: var(--ui-weight-bold);
+    }
   }
   .is-size-#{$i} {
     font-size: var(--ui-size-#{$i}) !important;
@@ -13,6 +15,21 @@
       @include breakpoint-up($bp) {
         &-#{$bp} {
           font-size: var(--ui-size-#{$i}) !important;
+        }
+      }
+    }
+  }
+}
+
+$weights: (light, normal, medium, semibold, bold);
+@each $weight in $weights {
+  .is-weight-#{$weight} {
+    font-weight: var(--ui-weight-#{$weight}) !important;
+
+    @each $bp in map-keys($ui-breakpoints) {
+      @include breakpoint-up($bp) {
+        &-#{$bp} {
+          font-weight: var(--ui-weight-#{$weight}) !important;
         }
       }
     }

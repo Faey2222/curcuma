@@ -1,0 +1,43 @@
+.#{$ui-name-button} {
+  padding: var(--ui-button-padding-y) var(--ui-button-padding-x);
+  border-radius: var(--ui-radius);
+  background-color: transparent;
+  border: 1px solid var(--ui-gray-lighter);
+  color: var(--ui-body-color);
+  cursor: pointer;
+  @if $ui-setting-use-transition == true {
+    transition: var(--ui-transition);
+  }
+
+  &:hover {
+    border-color: var(--ui-gray-light);
+  }
+
+  @each $variation in $ui-colors {
+    $key: nth(map-keys($ui-colors), index($ui-colors, $variation));
+    $val: map-get(map-get($ui-colors, $key), name);
+    $var: map-get(map-get($ui-colors, $key), var);
+    $state: map-get(map-get($ui-colors, $key), state-name);
+
+    &--#{$key} {
+      border: 0;
+      background-color: var(--#{$val});
+      @include find-color($var);
+
+      &:hover {
+        background-color: var(--#{$state});
+      }
+
+      &.is-outlined {
+        background-color: transparent;
+        border: 1px solid var(--#{$val});
+        color: var(--#{$val});
+
+        &:hover {
+          background-color: var(--#{$val});
+          @include find-color($var);
+        }
+      }
+    }
+  }
+}
