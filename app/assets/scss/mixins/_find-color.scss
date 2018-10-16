@@ -1,8 +1,0 @@
-@mixin find-color($c) {
-  $luminance: luminance($c);
-  @if $luminance >= 0.5 {
-    color: var(--ui-color);
-  } @else {
-    color: var(--ui-color-inverted);
-  }
-}

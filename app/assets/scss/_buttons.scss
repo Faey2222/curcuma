@@ -22,7 +22,7 @@
     &--#{$key} {
       border: 0;
       background-color: var(--#{$val});
-      @include find-color($var);
+      color: find-color($var);
 
       &:hover {
         background-color: var(--#{$state});
@@ -35,7 +35,7 @@
 
         &:hover {
           background-color: var(--#{$val});
-          @include find-color($var);
+          color: find-color($var);
         }
       }
     }

@@ -1,0 +1,8 @@
+@function find-color($c) {
+  $luminance: luminance($c);
+  @if $luminance >= 0.5 {
+    @return var(--ui-color);
+  } @else {
+    @return var(--ui-color-inverted);
+  }
+}

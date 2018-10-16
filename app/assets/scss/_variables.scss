@@ -26,7 +26,7 @@ $ui-primary: #f79461 !default; //#ff0471
 $ui-secondary: #eb798a !default; //#577ef3
 $ui-color-interval: 10% !default;
 
-$ui-color: rgba(0,0,0,.7);
+$ui-color: rgba(0,0,0,.65);
 $ui-color-inverted: #fff;
 
 $ui-black: #000 !default;
@@ -69,20 +69,35 @@ $ui-colors: (
     var: $ui-white,
     state-name: ui-gray-lighter
   ),
+  lighter: (
+    name: ui-gray-lighter,
+    var: $ui-gray-lighter,
+    state-name: ui-gray-light
+  ),
   light: (
+    name: ui-gray-light,
+    var: $ui-gray-light,
+    state-name: ui-gray
+  ),
+  gray: (
     name: ui-gray,
     var: $ui-gray,
     state-name: ui-gray-dark
   ),
   dark: (
+    name: ui-gray-dark,
+    var: $ui-gray-dark,
+    state-name: ui-gray-darker
+  ),
+  darker: (
     name: ui-gray-darker,
     var: $ui-gray-darker,
     state-name: ui-black
   ),
   warning: (
-    name: ui-orange,
-    var: $ui-orange,
-    state-name: ui-orange-dark
+    name: ui-yellow,
+    var: $ui-yellow,
+    state-name: ui-yellow-dark
   ),
   info: (
     name: ui-cyan,
@@ -151,8 +166,8 @@ $ui-max-widths: (
 // Buttons
 // 
 $ui-name-button: "button" !default;
-$ui-button-padding-x: rem(14px);
-$ui-button-padding-y: rem(8px);
+$ui-button-padding-x: rem(15px);
+$ui-button-padding-y: rem(9px);
 
 
 //
