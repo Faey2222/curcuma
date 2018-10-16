@@ -1,0 +1,58 @@
+:root {
+  // Base
+  --ui-body-bg: #{get-hsl($ui-body-bg)};
+  --ui-body-color: #{get-hsl($ui-body-color)};
+
+  // Transitions
+  --ui-transition-speed: #{$ui-transition-speed};
+  --ui-transition-style: #{$ui-transition-style};
+  --ui-transition: all var(--ui-transition-speed) var(--ui-transition-style);
+
+  //Colors
+  --ui-color: #{$ui-color};
+  --ui-color-inverted: #{$ui-color-inverted};
+  @include get-color-variations("ui-primary", $ui-primary);
+  @include get-color-variations("ui-secondary", $ui-secondary);
+  @include get-color-variations("ui-orange", $ui-orange);
+  @include get-color-variations("ui-yellow", $ui-yellow);
+  @include get-color-variations("ui-green", $ui-green);
+  @include get-color-variations("ui-turquoise", $ui-turquoise);
+  @include get-color-variations("ui-cyan", $ui-cyan);
+  @include get-color-variations("ui-blue", $ui-blue);
+  @include get-color-variations("ui-purple", $ui-purple);
+  @include get-color-variations("ui-red", $ui-red);
+
+  --ui-black: #{get-hsl($ui-black)};
+  --ui-white: #{get-hsl($ui-white)};
+  --ui-gray-lighter: #{get-hsl($ui-gray-lighter)};
+  --ui-gray-light: #{get-hsl($ui-gray-light)};
+  --ui-gray: #{get-hsl($ui-gray)};
+  --ui-gray-dark: #{get-hsl($ui-gray-dark)};
+  --ui-gray-darker: #{get-hsl($ui-gray-darker)};
+
+  // Typography
+  --ui-family-sans-serif: #{$ui-family-sans-serif};
+  --ui-family-monospace: #{$ui-family-monospace};
+  --ui-family-render-mode: #{$ui-render-mode};
+
+  --ui-size-1: #{$ui-size-1};
+  --ui-size-2: #{$ui-size-2};
+  --ui-size-3: #{$ui-size-3};
+  --ui-size-4: #{$ui-size-4};
+  --ui-size-5: #{$ui-size-5};
+  --ui-size-6: #{$ui-size-6};
+  --ui-size-7: #{$ui-size-7};
+
+  --ui-weight-light: #{$ui-weight-light};
+  --ui-weight-normal: #{$ui-weight-normal};
+  --ui-weight-medium: #{$ui-weight-medium};
+  --ui-weight-semibold: #{$ui-weight-semibold};
+  --ui-weight-bold: #{$ui-weight-bold};
+
+  // Buttons
+  --ui-button-padding-x: #{$ui-button-padding-x};
+  --ui-button-padding-y: #{$ui-button-padding-y};
+
+  // Radius
+  --ui-radius: #{$ui-radius};
+}

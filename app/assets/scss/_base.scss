@@ -1,11 +1,13 @@
 $bg-color: #fff;
 
 body {
-    background: $bg-color;
+  font-family: var(--ui-family-sans-serif);
+  background-color: var(--ui-body-bg);
+  color: var(--ui-body-color);
 }
 
 img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }

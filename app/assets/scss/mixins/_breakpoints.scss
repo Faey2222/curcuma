@@ -1,0 +1,42 @@
+@mixin breakpoint-up($val) {
+  @media (#{get-breakpoint($val, false)}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($val) {
+  @media (max-width: #{get-breakpoint($val, true)}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-only($val) {
+  $index: index(map-keys($ui-breakpoints), $val);
+  $next: null;
+
+  @if $index + 1 <= length($ui-breakpoints) {
+    $next: nth(map-keys($ui-breakpoints), $index + 1);
+  } @else {
+    $next: $val;
+  }
+
+  @if $index == 0 {
+    @media (min-width: 0) and (max-width: #{get-breakpoint($next, true)}) {
+      @content;
+    }
+  } @else {
+    @if $index == length($ui-breakpoints) {
+      @include breakpoint-up($val) {
+        @content;
+      }
+    } @else {
+      @media (min-width: #{get-breakpoint($val, true)}) and (max-width: #{get-breakpoint($next, true) - 1}) {
+        @content;
+      }
+    }
+  }
+}
+
+// @mixin breakpoint-between($val1, $val2) {
+
+// }

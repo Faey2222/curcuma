@@ -1,0 +1,21 @@
+@function get-hsl($color, $alpha: false) {
+  $_hue: round(hue($color));
+  $_saturation: decimal-round(saturation($color), 2);
+  $_lightness: decimal-round(lightness($color), 2);
+  $_hue: to-number(str-slice("#{$_hue}", 1, str-index("#{$_hue}", "deg") - 1));
+  $_alpha: false;
+
+  @if false == $alpha {
+    $_alpha: if(1 == alpha($color), false, alpha($color));
+  } @else {
+    $_alpha: $alpha;
+  }
+
+  @if $_alpha {
+    @return unquote(
+      "hsla(#{$_hue}, #{$_saturation}, #{$_lightness}, #{$_alpha})"
+    );
+  }
+
+  @return unquote("hsl(#{$_hue}, #{$_saturation}, #{$_lightness})");
+}

@@ -1,0 +1,21 @@
+@mixin get-color-variations($name, $var) {
+  $types: (
+    "lighter": $ui-color-interval * 2,
+    "light": $ui-color-interval,
+    "dark": $ui-color-interval,
+    "darker": $ui-color-interval * 2
+  );
+  @each $t in $types {
+    $arg: null;
+    @if (index($types, $t) <= 2) {
+      $arg: lighten($var, map-get($types, nth(map-keys($types), index($types, $t))));
+    } @else {
+      $arg: darken($var, map-get($types, nth(map-keys($types), index($types, $t))));
+    }
+    --#{$name}-#{nth(map-keys($types),index($types, $t))}: #{get-hsl($arg)};
+
+    @if (index($types, $t) == 2) {
+      --#{$name}: #{get-hsl($var)};
+    }
+  }
+}

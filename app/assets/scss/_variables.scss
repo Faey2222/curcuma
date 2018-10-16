@@ -1,9 +1,176 @@
-// Layout
-$ui-cols: 12;
-$ui-gutter: 30px;
-$ui-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px) !default;
-$ui-max-widths: (xs: 0, sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+// Variables
+//
+// Variables within Curcuma UI should follow this schema: '$ui-component-property-size'
 
-$ui-name-container: "container";
-$ui-name-row: "row";
-$ui-name-col: "col";
+//
+// Base
+//
+$ui-body-bg: #fff !default;
+$ui-body-color: #3a3a3a !default;
+
+// 
+// Settings
+// 
+$ui-setting-use-transition: true !default;
+
+// 
+// Transitions
+// 
+$ui-transition-speed: .25s !default;
+$ui-transition-style: ease-in-out !default;
+
+//
+// Colors
+//
+$ui-primary: #f79461 !default; //#ff0471
+$ui-secondary: #eb798a !default; //#577ef3
+$ui-color-interval: 10% !default;
+
+$ui-color: rgba(0,0,0,.65);
+$ui-color-inverted: #fff;
+
+$ui-black: #000 !default;
+$ui-white: #fff !default;
+
+$ui-gray: #7a7a7a !default;
+$ui-gray-lighter: #dbdbdb !default;
+$ui-gray-light: #b5b5b5 !default;
+$ui-gray: #7a7a7a !default;
+$ui-gray-dark: #494949 !default;
+$ui-gray-darker: #353535 !default;
+
+$ui-orange: #f3815e !default;
+$ui-yellow: #fedd56 !default;
+$ui-green: #4ddb7f !default;
+$ui-turquoise: #00d1b1 !default;
+$ui-cyan: #3ea8ef !default;
+$ui-blue: #3273dc !default;
+$ui-purple: #b76bff !default;
+$ui-red: #f75a5c !default;
+
+$ui-colors: (
+  primary: (
+    name: ui-primary,
+    var: $ui-primary,
+    state-name: ui-primary-dark
+  ),
+  secondary: (
+    name: ui-secondary,
+    var: $ui-secondary,
+    state-name: ui-secondary-dark
+  ),
+  black: (
+    name: ui-black,
+    var: $ui-black,
+    state-name: ui-gray-darker
+  ),
+  white: (
+    name: ui-white,
+    var: $ui-white,
+    state-name: ui-gray-lighter
+  ),
+  lighter: (
+    name: ui-gray-lighter,
+    var: $ui-gray-lighter,
+    state-name: ui-gray-light
+  ),
+  light: (
+    name: ui-gray-light,
+    var: $ui-gray-light,
+    state-name: ui-gray
+  ),
+  gray: (
+    name: ui-gray,
+    var: $ui-gray,
+    state-name: ui-gray-dark
+  ),
+  dark: (
+    name: ui-gray-dark,
+    var: $ui-gray-dark,
+    state-name: ui-gray-darker
+  ),
+  darker: (
+    name: ui-gray-darker,
+    var: $ui-gray-darker,
+    state-name: ui-black
+  ),
+  warning: (
+    name: ui-yellow,
+    var: $ui-yellow,
+    state-name: ui-yellow-dark
+  ),
+  info: (
+    name: ui-cyan,
+    var: $ui-cyan,
+    state-name: ui-cyan-dark
+  ),
+  success: (
+    name: ui-green,
+    var: $ui-green,
+    state-name: ui-green-dark
+  ),
+  danger: (
+    name: ui-red,
+    var: $ui-red,
+    state-name: ui-red-dark
+  )
+) !default;
+
+//
+// Typography
+//
+$ui-family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Krub", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$ui-family-monospace: monospace !default;
+$ui-render-mode: optimizeLegibility !default;
+
+$ui-size-1: rem(48px) !default;
+$ui-size-2: rem(40px) !default;
+$ui-size-3: rem(32px) !default;
+$ui-size-4: rem(24px) !default;
+$ui-size-5: rem(20px) !default;
+$ui-size-6: rem(16px) !default;
+$ui-size-7: rem(12px) !default;
+
+$ui-weight-light: 300 !default;
+$ui-weight-normal: 400 !default;
+$ui-weight-medium: 500 !default;
+$ui-weight-semibold: 600 !default;
+$ui-weight-bold: 700 !default;
+
+//
+// Layout
+//
+$ui-name-container: "container" !default;
+$ui-name-row: "row" !default;
+$ui-name-col: "col" !default;
+$ui-name-offset: "offset" !default;
+
+$ui-cols: 12 !default;
+$ui-gutter: rem(30px) !default;
+$ui-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+$ui-max-widths: (
+  xs: 0,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+// 
+// Buttons
+// 
+$ui-name-button: "button" !default;
+$ui-button-padding-x: rem(15px);
+$ui-button-padding-y: rem(9px);
+
+
+//
+// Radius
+// 
+$ui-radius: rem(4px);
