@@ -130,6 +130,45 @@ $ui-size-4: rem(24px) !default;
 $ui-size-5: rem(20px) !default;
 $ui-size-6: rem(16px) !default;
 $ui-size-7: rem(12px) !default;
+$ui-size-8: rem(8px) !default;
+
+$ui-sizes: (
+  1: (
+    name: ui-size-1,
+    var: $ui-size-1
+  ),
+  2: (
+    name: ui-size-2,
+    var: $ui-size-2
+  ),
+  3: (
+    name: ui-size-3,
+    var: $ui-size-3
+  ),
+  4: (
+    name: ui-size-4,
+    var: $ui-size-4
+  ),
+  5: (
+    name: ui-size-5,
+    var: $ui-size-5
+  ),
+  6: (
+    name: ui-size-6,
+    var: $ui-size-6
+  ),
+  7: (
+    name: ui-size-7,
+    var: $ui-size-7
+  ),
+  8: (
+    name: ui-size-8,
+    var: $ui-size-8
+  )
+) !default;
+
+$ui-named-size-small: small;
+$ui-named-size-large: large;
 
 $ui-weight-light: 300 !default;
 $ui-weight-normal: 400 !default;
@@ -166,11 +205,37 @@ $ui-max-widths: (
 // Buttons
 // 
 $ui-name-button: "button" !default;
-$ui-button-padding-x: rem(15px);
-$ui-button-padding-y: rem(9px);
+$ui-button-padding-x: rem(15px) !default;
+$ui-button-padding-y: rem(9px) !default;
+$ui-button-small-font-size: $ui-size-7 !default;
+$ui-button-small-padding-x: rem(12px) !default;
+$ui-button-small-padding-y: rem(6px) !default;
+$ui-button-large-font-size: $ui-size-5 !default;
+$ui-button-large-padding-x: rem(19px) !default;
+$ui-button-large-padding-y: rem(12px) !default;
 
 
 //
 // Radius
 // 
-$ui-radius: rem(4px);
+$ui-radius: rem(4px) !default;
+$ui-radius-small: rem(3px) !default;
+$ui-radius-large: rem(6px) !default;
+
+
+//
+// Utilities
+// 
+$ui-name-has-bgc: "bgc" !default;
+
+$ui-name-has-padding: "p" !default;
+$ui-name-has-padding-top: "t" !default;
+$ui-name-has-padding-left: "l" !default;
+$ui-name-has-padding-right: "r" !default;
+$ui-name-has-padding-bottom: "r" !default;
+
+$ui-name-has-margin: "m" !default;
+$ui-name-has-margin-top: "t" !default;
+$ui-name-has-margin-left: "l" !default;
+$ui-name-has-margin-right: "r" !default;
+$ui-name-has-margin-bottom: "r" !default;

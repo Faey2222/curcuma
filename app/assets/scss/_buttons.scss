@@ -9,8 +9,19 @@
     transition: var(--ui-transition);
   }
 
-  &:hover {
+  &:hover,
+  &.is-hovered {
     border-color: var(--ui-gray-light);
+  }
+
+  &.is-#{$ui-named-size-small} {
+    font-size: var(--ui-button-small-font-size);
+    padding: var(--ui-button-small-padding-y) var(--ui-button-small-padding-x);
+  }
+
+  &.is-#{$ui-named-size-large} {
+    font-size: var(--ui-button-large-font-size);
+    padding: var(--ui-button-large-padding-y) var(--ui-button-large-padding-x);
   }
 
   @each $variation in $ui-colors {
@@ -24,7 +35,8 @@
       background-color: var(--#{$val});
       color: find-color($var);
 
-      &:hover {
+      &:hover,
+      &.is-hovered {
         background-color: var(--#{$state});
       }
 
@@ -33,9 +45,34 @@
         border: 1px solid var(--#{$val});
         color: var(--#{$val});
 
-        &:hover {
+        &:hover,
+        &.is-hovered {
           background-color: var(--#{$val});
           color: find-color($var);
+        }
+      }
+
+      &.is-inverted {
+        background-color: var(--ui-white);
+        color: var(--#{$val});
+
+        &:hover,
+        &.is-hovered {
+          background-color: var(--#{$val});
+          color: find-color($var);
+        }
+
+        &.is-outlined {
+          background-color: transparent;
+          border: 1px solid var(--ui-white);
+          color: var(--ui-white);
+
+          &:hover,
+          &.is-hovered {
+            background-color: var(--#{$val});
+            color: find-color($var);
+            border: 1px solid var(--#{$val});
+          }
         }
       }
     }

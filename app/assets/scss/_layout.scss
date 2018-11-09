@@ -62,7 +62,7 @@
   }
 }
 
-.#{$ui-name-offset} {
+.has-#{$ui-name-offset} {
   @each $bp in map-keys($ui-breakpoints) {
     $index: index(map-keys($ui-breakpoints), $bp);
     $next: get-next($index);
