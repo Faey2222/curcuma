@@ -4,10 +4,26 @@ body {
   font-family: var(--ui-family-sans-serif);
   background-color: var(--ui-body-bg);
   color: var(--ui-body-color);
+  font-size: var(--ui-base-size);
 }
 
 img {
-  width: 100%;
   height: auto;
-  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--ui-primary);
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--ui-transition);
+
+  &:hover {
+    color: var(--ui-color);
+  }
+}
+
+::selection {
+  background-color: var(--ui-primary);
+  color: var(--ui-white);
 }
