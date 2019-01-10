@@ -1,10 +1,13 @@
 .has-#{$ui-name-has-bgc} {
-  @each $variation in $ui-colors {
-    $key: nth(map-keys($ui-colors), index($ui-colors, $variation));
-    $val: map-get(map-get($ui-colors, $key), name);
+  $color-types: $ui-colors $ui-shades;
+  @each $color-type in $color-types {
+    @each $variation in $color-type {
+      $key: nth(map-keys($color-type), index($color-type, $variation));
+      $val: map-get(map-get($color-type, $key), name);
 
-    &--#{$key} {
-      background-color: var(--#{$val}) !important;
+      &--#{$key} {
+        background-color: var(--#{$val}) !important;
+      }
     }
   }
 }
