@@ -5,39 +5,45 @@
  * Licensed under MIT (https://github.com/faey2222/curcuma/blob/master/LICENSE)
  */
 
-@import url("https://fonts.googleapis.com/css?family=Krub:300,300i,400,400i,500,500i,600,600i,700,700i");
+@import url('https://fonts.googleapis.com/css?family=Krub:300,300i,400,400i,500,500i,600,600i,700,700i');
 
 //
 // Import required files
 //
-@import "functions";
-@import "mixins";
-@import "variables";
-@import "root";
+@import 'functions';
+@import 'mixins';
+@import 'variables';
+@import 'root';
 
 //
 // Base
 //
-@import "reset";
-@import "base";
+@import 'reset';
+@import 'base';
 
 //
 // Utilities
 //
-@import "utilities/has-bgc";
-@import "utilities/has-padding";
-@import "utilities/has-margin";
+@import 'utilities/has-bgc';
+@import 'utilities/has-padding';
+@import 'utilities/has-margin';
+
+//
+// Animations
+//
+@import 'animations/spin';
 
 //
 // Layout
 //
-@import "layout";
+@import 'layout';
 // @import "utilities/layout"
 
 //
 // Content
 //
-@import "typography";
+@import 'typography';
+@import 'icons';
 // @import "tables";
 // @import "figures";
 // @import "images";
@@ -48,10 +54,11 @@
 //
 // @import "alerts";
 // @import "box";
-@import "buttons";
+@import 'buttons';
 // @import "button-group";
 // @import "breadcrumb";
 // @import "forms";
+@import 'navbar';
 // @import "navs";
 // @import "pagination";
 // @import "tags";
