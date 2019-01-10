@@ -1,7 +1,7 @@
 .#{$ui-name-container} {
   width: 100%;
-  padding-left: $ui-gutter / 2;
-  padding-right: $ui-gutter / 2;
+  padding-left: calc(var(--ui-gutter) / 2);
+  padding-right: calc(var(--ui-gutter) / 2);
   margin-left: auto;
   margin-right: auto;
 
@@ -14,8 +14,8 @@
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-left: $ui-gutter / 2;
-  padding-right: $ui-gutter / 2;
+  padding-left: calc(var(--ui-gutter) / 2);
+  padding-right: calc(var(--ui-gutter) / 2);
 
   &.has-no-gutters {
     @include no-paddings-x;
@@ -24,8 +24,8 @@
   @at-root .#{$ui-name-row} {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -$ui-gutter / 2;
-    margin-right: -$ui-gutter / 2;
+    margin-left: -calc(var(--ui-gutter) / 2);
+    margin-right: -calc(var(--ui-gutter) / 2);
 
     &.has-no-gutters {
       @include no-margins-x;
