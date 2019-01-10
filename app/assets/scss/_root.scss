@@ -9,32 +9,37 @@
   --ui-transition: all var(--ui-transition-speed) var(--ui-transition-style);
 
   //Colors
+  --ui-low-opacity: #{$ui-low-opacity};
   --ui-color: #{$ui-color};
   --ui-color-inverted: #{$ui-color-inverted};
-  @include get-color-variations("ui-primary", $ui-primary);
-  @include get-color-variations("ui-secondary", $ui-secondary);
-  @include get-color-variations("ui-orange", $ui-orange);
-  @include get-color-variations("ui-yellow", $ui-yellow);
-  @include get-color-variations("ui-green", $ui-green);
-  @include get-color-variations("ui-turquoise", $ui-turquoise);
-  @include get-color-variations("ui-cyan", $ui-cyan);
-  @include get-color-variations("ui-blue", $ui-blue);
-  @include get-color-variations("ui-purple", $ui-purple);
-  @include get-color-variations("ui-red", $ui-red);
+  @include get-color-variations('ui-primary', $ui-primary);
+  @include get-color-variations('ui-secondary', $ui-secondary);
+  @include get-color-variations('ui-orange', $ui-orange);
+  @include get-color-variations('ui-yellow', $ui-yellow);
+  @include get-color-variations('ui-green', $ui-green);
+  @include get-color-variations('ui-turquoise', $ui-turquoise);
+  @include get-color-variations('ui-cyan', $ui-cyan);
+  @include get-color-variations('ui-blue', $ui-blue);
+  @include get-color-variations('ui-purple', $ui-purple);
+  @include get-color-variations('ui-red', $ui-red);
 
   --ui-black: #{get-hsl($ui-black)};
   --ui-white: #{get-hsl($ui-white)};
+  --ui-gray-lightest: #{get-hsl($ui-gray-lightest)};
   --ui-gray-lighter: #{get-hsl($ui-gray-lighter)};
   --ui-gray-light: #{get-hsl($ui-gray-light)};
   --ui-gray: #{get-hsl($ui-gray)};
   --ui-gray-dark: #{get-hsl($ui-gray-dark)};
   --ui-gray-darker: #{get-hsl($ui-gray-darker)};
+  --ui-gray-darkest: #{get-hsl($ui-gray-darkest)};
+  --ui-gray-low-opacity: #{get-hsl($ui-gray, $ui-low-opacity)};
 
   // Typography
   --ui-family-sans-serif: #{$ui-family-sans-serif};
   --ui-family-monospace: #{$ui-family-monospace};
   --ui-family-render-mode: #{$ui-render-mode};
 
+  --ui-base-size: #{$ui-size-6};
   --ui-size-1: #{$ui-size-1};
   --ui-size-2: #{$ui-size-2};
   --ui-size-3: #{$ui-size-3};
@@ -42,6 +47,7 @@
   --ui-size-5: #{$ui-size-5};
   --ui-size-6: #{$ui-size-6};
   --ui-size-7: #{$ui-size-7};
+  --ui-size-8: #{$ui-size-8};
 
   --ui-weight-light: #{$ui-weight-light};
   --ui-weight-normal: #{$ui-weight-normal};
@@ -49,10 +55,37 @@
   --ui-weight-semibold: #{$ui-weight-semibold};
   --ui-weight-bold: #{$ui-weight-bold};
 
+  // Base
+  --ui-gutter: #{$ui-gutter};
+
   // Buttons
   --ui-button-padding-x: #{$ui-button-padding-x};
   --ui-button-padding-y: #{$ui-button-padding-y};
+  --ui-button-margin-bottom: #{$ui-button-margin-bottom};
+  --ui-button-margin-right: #{$ui-button-margin-right};
+  --ui-button-focus-opacity: #{$ui-button-focus-opacity};
+  --ui-button-focus-width: #{$ui-button-focus-width};
+  --ui-button-small-font-size: #{$ui-button-small-font-size};
+  --ui-button-small-padding-x: #{$ui-button-small-padding-x};
+  --ui-button-small-padding-y: #{$ui-button-small-padding-y};
+  --ui-button-large-font-size: #{$ui-button-large-font-size};
+  --ui-button-large-padding-x: #{$ui-button-large-padding-x};
+  --ui-button-large-padding-y: #{$ui-button-large-padding-y};
+  --ui-button-rounded-radius: #{$ui-button-rounded-radius};
+  --ui-button-small-rounded-radius: #{$ui-button-small-rounded-radius};
+  --ui-button-large-rounded-radius: #{$ui-button-large-rounded-radius};
+
+  // Navbar
+  --ui-navbar-minheight: #{$ui-navbar-minheight};
+  --ui-navbar-item-padding-x: #{$ui-navbar-item-padding-x};
+  --ui-navbar-item-padding-y: #{$ui-navbar-item-padding-y};
+  --ui-navbar-color: #{$ui-navbar-color};
+  --ui-navbar-item-hover-color: #{$ui-navbar-item-hover-color};
+  --ui-navbar-shadow: #{$ui-navbar-shadow};
 
   // Radius
   --ui-radius: #{$ui-radius};
+
+  // Icons
+  --ui-icon-spacer: #{$ui-icon-spacer};
 }

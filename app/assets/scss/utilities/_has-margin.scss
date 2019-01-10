@@ -1,0 +1,54 @@
+.has-#{$ui-name-has-margin} {
+  @each $variation in $ui-sizes {
+    $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
+    $val: map-get(map-get($ui-sizes, $key), name);
+
+    &--#{$key} {
+      margin: var(--#{$val}) !important;
+    }
+  }
+}
+
+.has-#{$ui-name-has-margin}-#{$ui-name-has-margin-top} {
+  @each $variation in $ui-sizes {
+    $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
+    $val: map-get(map-get($ui-sizes, $key), name);
+
+    &--#{$key} {
+      margin-top: var(--#{$val}) !important;
+    }
+  }
+}
+
+.has-#{$ui-name-has-margin}-#{$ui-name-has-margin-left} {
+  @each $variation in $ui-sizes {
+    $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
+    $val: map-get(map-get($ui-sizes, $key), name);
+
+    &--#{$key} {
+      margin-left: var(--#{$val}) !important;
+    }
+  }
+}
+
+.has-#{$ui-name-has-margin}-#{$ui-name-has-margin-right} {
+  @each $variation in $ui-sizes {
+    $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
+    $val: map-get(map-get($ui-sizes, $key), name);
+
+    &--#{$key} {
+      margin-right: var(--#{$val}) !important;
+    }
+  }
+}
+
+.has-#{$ui-name-has-margin}-#{$ui-name-has-margin-bottom} {
+  @each $variation in $ui-sizes {
+    $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
+    $val: map-get(map-get($ui-sizes, $key), name);
+
+    &--#{$key} {
+      margin-bottom: var(--#{$val}) !important;
+    }
+  }
+}

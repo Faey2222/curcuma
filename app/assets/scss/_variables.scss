@@ -16,12 +16,14 @@ $ui-setting-use-transition: true !default;
 // 
 // Transitions
 // 
-$ui-transition-speed: .25s !default;
+$ui-transition-speed: .15s !default;
 $ui-transition-style: ease-in-out !default;
 
 //
 // Colors
 //
+$ui-gradient: 'dark';
+$ui-low-opacity: .4;
 $ui-primary: #f79461 !default; //#ff0471
 $ui-secondary: #eb798a !default; //#577ef3
 $ui-color-interval: 10% !default;
@@ -33,11 +35,13 @@ $ui-black: #000 !default;
 $ui-white: #fff !default;
 
 $ui-gray: #7a7a7a !default;
+$ui-gray-lightest: #f7f7f7 !default;
 $ui-gray-lighter: #dbdbdb !default;
 $ui-gray-light: #b5b5b5 !default;
 $ui-gray: #7a7a7a !default;
 $ui-gray-dark: #494949 !default;
 $ui-gray-darker: #353535 !default;
+$ui-gray-darkest: #1a1a1a !default;
 
 $ui-orange: #f3815e !default;
 $ui-yellow: #fedd56 !default;
@@ -48,73 +52,90 @@ $ui-blue: #3273dc !default;
 $ui-purple: #b76bff !default;
 $ui-red: #f75a5c !default;
 
+// $ui-color-focus-opacity: .25 !default;
 $ui-colors: (
   primary: (
     name: ui-primary,
     var: $ui-primary,
-    state-name: ui-primary-dark
+    state-name: ui-primary-dark,
+    active-state-name: ui-primary-darker
   ),
   secondary: (
     name: ui-secondary,
     var: $ui-secondary,
-    state-name: ui-secondary-dark
-  ),
-  black: (
-    name: ui-black,
-    var: $ui-black,
-    state-name: ui-gray-darker
-  ),
-  white: (
-    name: ui-white,
-    var: $ui-white,
-    state-name: ui-gray-lighter
-  ),
-  lighter: (
-    name: ui-gray-lighter,
-    var: $ui-gray-lighter,
-    state-name: ui-gray-light
-  ),
-  light: (
-    name: ui-gray-light,
-    var: $ui-gray-light,
-    state-name: ui-gray
-  ),
-  gray: (
-    name: ui-gray,
-    var: $ui-gray,
-    state-name: ui-gray-dark
-  ),
-  dark: (
-    name: ui-gray-dark,
-    var: $ui-gray-dark,
-    state-name: ui-gray-darker
-  ),
-  darker: (
-    name: ui-gray-darker,
-    var: $ui-gray-darker,
-    state-name: ui-black
+    state-name: ui-secondary-dark,
+    active-state-name: ui-secondary-darker
   ),
   warning: (
     name: ui-yellow,
     var: $ui-yellow,
-    state-name: ui-yellow-dark
+    state-name: ui-yellow-dark,
+    active-state-name: ui-yellow-darker
   ),
   info: (
     name: ui-cyan,
     var: $ui-cyan,
-    state-name: ui-cyan-dark
+    state-name: ui-cyan-dark,
+    active-state-name: ui-cyan-darker
   ),
   success: (
     name: ui-green,
     var: $ui-green,
-    state-name: ui-green-dark
+    state-name: ui-green-dark,
+    active-state-name: ui-green-darker
   ),
   danger: (
     name: ui-red,
     var: $ui-red,
-    state-name: ui-red-dark
+    state-name: ui-red-dark,
+    active-state-name: ui-red-darker
   )
 ) !default;
+
+$ui-shades: (
+  black: (
+    name: ui-black,
+    var: $ui-black,
+    state-name: ui-gray-darker,
+    active-state-name: ui-gray-dark
+  ),
+  white: (
+    name: ui-white,
+    var: $ui-white,
+    state-name: ui-gray-lighter,
+    active-state-name: ui-gray-light
+  ),
+  lighter: (
+    name: ui-gray-lighter,
+    var: $ui-gray-lighter,
+    state-name: ui-gray-light,
+    active-state-name: ui-gray
+  ),
+  light: (
+    name: ui-gray-light,
+    var: $ui-gray-light,
+    state-name: ui-gray,
+    active-state-name: ui-gray-dark
+  ),
+  gray: (
+    name: ui-gray,
+    var: $ui-gray,
+    state-name: ui-gray-dark,
+    active-state-name: ui-gray-darker
+  ),
+  dark: (
+    name: ui-gray-dark,
+    var: $ui-gray-dark,
+    state-name: ui-gray-darker,
+    active-state-name: ui-black
+  ),
+  darker: (
+    name: ui-gray-darker,
+    var: $ui-gray-darker,
+    state-name: ui-black,
+    active-state-name: ui-gray-dark
+  )
+);
 
 //
 // Typography
@@ -130,6 +151,45 @@ $ui-size-4: rem(24px) !default;
 $ui-size-5: rem(20px) !default;
 $ui-size-6: rem(16px) !default;
 $ui-size-7: rem(12px) !default;
+$ui-size-8: rem(8px) !default;
+
+$ui-sizes: (
+  1: (
+    name: ui-size-1,
+    var: $ui-size-1
+  ),
+  2: (
+    name: ui-size-2,
+    var: $ui-size-2
+  ),
+  3: (
+    name: ui-size-3,
+    var: $ui-size-3
+  ),
+  4: (
+    name: ui-size-4,
+    var: $ui-size-4
+  ),
+  5: (
+    name: ui-size-5,
+    var: $ui-size-5
+  ),
+  6: (
+    name: ui-size-6,
+    var: $ui-size-6
+  ),
+  7: (
+    name: ui-size-7,
+    var: $ui-size-7
+  ),
+  8: (
+    name: ui-size-8,
+    var: $ui-size-8
+  )
+) !default;
+
+$ui-named-size-small: small;
+$ui-named-size-large: large;
 
 $ui-weight-light: 300 !default;
 $ui-weight-normal: 400 !default;
@@ -166,11 +226,62 @@ $ui-max-widths: (
 // Buttons
 // 
 $ui-name-button: "button" !default;
-$ui-button-padding-x: rem(15px);
-$ui-button-padding-y: rem(9px);
+$ui-name-buttons: "buttons" !default;
+$ui-button-padding-x: rem(15px) !default;
+$ui-button-padding-y: rem(9px) !default;
+$ui-button-margin-bottom: rem(5px) !default;
+$ui-button-margin-right: rem(8px) !default;
+$ui-button-focus-width: rem(3px) !default;
+$ui-button-focus-opacity: .25 !default;
+$ui-button-small-font-size: $ui-size-7 !default;
+$ui-button-small-padding-x: rem(12px) !default;
+$ui-button-small-padding-y: rem(6px) !default;
+$ui-button-large-font-size: $ui-size-5 !default;
+$ui-button-large-padding-x: rem(19px) !default;
+$ui-button-large-padding-y: rem(12px) !default;
+$ui-button-rounded-radius: rem(20px) !default;
+$ui-button-small-rounded-radius: rem(12px) !default;
+$ui-button-large-rounded-radius: rem(26px) !default;
 
+// 
+// Navbar
+// 
+$ui-name-navbar: "navbar" !default;
+$ui-navbar-minheight: rem(60px);
+$ui-navbar-item-padding-x: rem(12px);
+$ui-navbar-item-padding-y: rem(10px);
+$ui-navbar-color: $ui-color;
+$ui-navbar-item-hover-color: $ui-gray-lightest;
+$ui-navbar-shadow: rem(3px) 0 rem(5px) 0 rgba(0,0,0,.15);
 
 //
 // Radius
 // 
-$ui-radius: rem(4px);
+$ui-radius: rem(4px) !default;
+$ui-radius-small: rem(3px) !default;
+$ui-radius-large: rem(6px) !default;
+
+
+//
+// Icons
+// 
+$ui-name-icon: "icon" !default;
+$ui-icon-spacer: rem(8px) !default;
+
+
+//
+// Utilities
+// 
+$ui-name-has-bgc: "bgc" !default;
+
+$ui-name-has-padding: "p" !default;
+$ui-name-has-padding-top: "t" !default;
+$ui-name-has-padding-left: "l" !default;
+$ui-name-has-padding-right: "r" !default;
+$ui-name-has-padding-bottom: "r" !default;
+
+$ui-name-has-margin: "m" !default;
+$ui-name-has-margin-top: "t" !default;
+$ui-name-has-margin-left: "l" !default;
+$ui-name-has-margin-right: "r" !default;
+$ui-name-has-margin-bottom: "r" !default;

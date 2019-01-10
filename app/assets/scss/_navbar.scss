@@ -1,0 +1,69 @@
+.#{$ui-name-navbar} {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  min-height: var(--ui-navbar-minheight);
+  background-color: var(--ui-white);
+  position: relative;
+  z-index: 50;
+
+  &.is-fixed {
+    &-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &.has-shadow {
+    box-shadow: var(--ui-navbar-shadow);
+  }
+
+  @at-root html.has-navbar-fixed-top {
+    padding-top: var(--ui-navbar-minheight);
+  }
+
+  > .#{$ui-name-container} {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-height: var(--ui-navbar-minheight);
+  }
+
+  .#{$ui-name-navbar}__brand {
+    display: flex;
+    align-items: stretch;
+    flex-shrink: 0;
+    min-height: var(--ui-navbar-minheight);
+  }
+
+  .#{$ui-name-navbar}__item {
+    display: flex;
+    align-items: center;
+    // flex: 0 0;
+    color: var(--ui-color);
+    cursor: pointer;
+    padding: var(--ui-navbar-item-padding-y) var(--ui-navbar-item-padding-x);
+    position: relative;
+
+    img {
+      max-height: calc(var(--ui-navbar-minheight) - calc(var(--ui-gutter) / 2));
+    }
+  }
+
+  a.#{$ui-name-navbar}__item {
+    color: var(--ui-navbar-color);
+
+    &:hover {
+      color: var(--ui-primary);
+      background-color: var(--ui-navbar-item-hover-color);
+    }
+  }
+
+  .#{$ui-name-navbar}__menu {
+    display: flex;
+    align-items: stretch;
+    flex: 1 0;
+  }
+}
