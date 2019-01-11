@@ -64,7 +64,7 @@
 
         .#{$ui-name-navbar}__burger {
           &:hover {
-            background-color: find-color($var);
+            background-color: var(--#{$state});
           }
           > span {
             background-color: find-color($var);
