@@ -16,7 +16,9 @@ a {
   color: var(--ui-primary);
   cursor: pointer;
   text-decoration: none;
-  transition: var(--ui-transition);
+  @if $ui-setting-use-transition == true {
+    transition: var(--ui-transition);
+  }
 
   &:hover {
     color: var(--ui-color);
