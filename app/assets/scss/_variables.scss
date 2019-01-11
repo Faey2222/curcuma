@@ -22,14 +22,14 @@ $ui-transition-style: ease-in-out !default;
 //
 // Colors
 //
-$ui-gradient: 'dark';
-$ui-low-opacity: .4;
+$ui-gradient: 'dark' !default;
+$ui-low-opacity: .4 !default;
 $ui-primary: #f79461 !default; //#ff0471
 $ui-secondary: #eb798a !default; //#577ef3
 $ui-color-interval: 10% !default;
 
-$ui-color: rgba(0,0,0,.65);
-$ui-color-inverted: #fff;
+$ui-color: rgba(0,0,0,.65) !default;
+$ui-color-inverted: #fff !default;
 
 $ui-black: #000 !default;
 $ui-white: #fff !default;
@@ -137,6 +137,8 @@ $ui-shades: (
   )
 );
 
+$ui-border-color: $ui-gray-lighter !default;
+
 //
 // Typography
 //
@@ -209,17 +211,17 @@ $ui-cols: 12 !default;
 $ui-gutter: rem(30px) !default;
 $ui-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+  sm: 768px,
+  md: 992px,
+  lg: 1110px,
+  xl: 1260px
 ) !default;
 $ui-max-widths: (
   xs: 0,
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
+  sm: 100%,
+  md: 960px,
+  lg: 1120px,
+  xl: 1340px
 ) !default;
 
 // 
@@ -247,12 +249,16 @@ $ui-button-large-rounded-radius: rem(26px) !default;
 // Navbar
 // 
 $ui-name-navbar: "navbar" !default;
-$ui-navbar-minheight: rem(60px);
-$ui-navbar-item-padding-x: rem(12px);
-$ui-navbar-item-padding-y: rem(10px);
-$ui-navbar-color: $ui-color;
-$ui-navbar-item-hover-color: $ui-gray-lightest;
-$ui-navbar-shadow: rem(3px) 0 rem(5px) 0 rgba(0,0,0,.15);
+$ui-navbar-minheight: rem(60px) !default;
+$ui-navbar-item-padding-x: rem(12px) !default;
+$ui-navbar-item-padding-y: rem(10px) !default;
+$ui-navbar-color: $ui-color !default;
+$ui-navbar-item-hover-bgc: $ui-gray-lightest !default;
+$ui-navbar-shadow: rem(3px) 0 rem(5px) 0 rgba(0,0,0,.15) !default;
+$ui-navbar-link-arrow-size: rem(10px) !default;
+$ui-navbar-dropdown-shadow: 0px 0px 25px rgba(40, 47, 60, 0.05), 0px 20px 25px rgba(40, 47, 60, 0.05), 0px 3px 4px rgba(40, 47, 60, 0.05);
+$ui-navbar-dropdown-padding: rem(5px) 0;
+$ui-navbar-dropdown-font-size: rem(14px);
 
 //
 // Radius

@@ -34,6 +34,8 @@
   --ui-gray-darkest: #{get-hsl($ui-gray-darkest)};
   --ui-gray-low-opacity: #{get-hsl($ui-gray, $ui-low-opacity)};
 
+  --ui-border-color: #{$ui-border-color};
+
   // Typography
   --ui-family-sans-serif: #{$ui-family-sans-serif};
   --ui-family-monospace: #{$ui-family-monospace};
@@ -80,8 +82,12 @@
   --ui-navbar-item-padding-x: #{$ui-navbar-item-padding-x};
   --ui-navbar-item-padding-y: #{$ui-navbar-item-padding-y};
   --ui-navbar-color: #{$ui-navbar-color};
-  --ui-navbar-item-hover-color: #{$ui-navbar-item-hover-color};
+  --ui-navbar-item-hover-bgc: #{$ui-navbar-item-hover-bgc};
   --ui-navbar-shadow: #{$ui-navbar-shadow};
+  --ui-navbar-link-arrow-size: #{$ui-navbar-link-arrow-size};
+  --ui-navbar-dropdown-shadow: #{$ui-navbar-dropdown-shadow};
+  --ui-navbar-dropdown-padding: #{$ui-navbar-dropdown-padding};
+  --ui-navbar-dropdown-font-size: #{$ui-navbar-dropdown-font-size};
 
   // Radius
   --ui-radius: #{$ui-radius};
