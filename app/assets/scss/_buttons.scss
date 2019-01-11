@@ -42,8 +42,12 @@
     }
   }
 
-  .#{$ui-name-button} {
+  .#{$ui-name-button}:not(.is-fullwidth) {
     margin-right: var(--ui-button-margin-right);
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
