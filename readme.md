@@ -11,6 +11,6 @@ https://curcuma-ui.de
 
 
 ## Information about the developer
-At the present Curcuma UI is being developed by Benjamin Joshua Hood an employee at [Curry Solutions GmbH](https://curry-solutions.com) based in Erlangen, Germany.
+At the present Curcuma UI is being developed by <a href="https://www.xing.com/profile/BenjaminJoshua_Hood" target="_blank" title="Visit Xing profile">Benjamin Joshua Hood</a> an employee at [Curry Solutions GmbH](https://curry-solutions.com) based in Erlangen, Germany.
 
 <a href="https://curry-solutions.com" target="_blank"><img src="https://www.curry-solutions.com/assets/images/logo_CSL.svg" width="200"></a>
