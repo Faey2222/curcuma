@@ -146,14 +146,18 @@ $ui-family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Krub", "H
 $ui-family-monospace: monospace !default;
 $ui-render-mode: optimizeLegibility !default;
 
-$ui-size-1: rem(48px) !default;
-$ui-size-2: rem(40px) !default;
-$ui-size-3: rem(32px) !default;
-$ui-size-4: rem(24px) !default;
-$ui-size-5: rem(20px) !default;
-$ui-size-6: rem(16px) !default;
-$ui-size-7: rem(12px) !default;
-$ui-size-8: rem(8px) !default;
+$ui-size-1: rem(8px) !default;
+$ui-size-2: rem(12px) !default;
+$ui-size-3: rem(16px) !default;
+$ui-size-4: rem(20px) !default;
+$ui-size-5: rem(24px) !default;
+$ui-size-6: rem(32px) !default;
+$ui-size-7: rem(40px) !default;
+$ui-size-8: rem(48px) !default;
+$ui-size-9: rem(56px) !default;
+$ui-size-10: rem(64px) !default;
+$ui-base-size: $ui-size-3 !default;
+$ui-headline-start-at: 8 !default;
 
 $ui-sizes: (
   1: (
@@ -187,11 +191,19 @@ $ui-sizes: (
   8: (
     name: ui-size-8,
     var: $ui-size-8
+  ),
+  9: (
+    name: ui-size-9,
+    var: $ui-size-9
+  ),
+  10: (
+    name: ui-size-10,
+    var: $ui-size-10
   )
 ) !default;
 
-$ui-named-size-small: small;
-$ui-named-size-large: large;
+$ui-named-size-small: "small" !default;
+$ui-named-size-large: "large" !default;
 
 $ui-weight-light: 300 !default;
 $ui-weight-normal: 400 !default;
@@ -235,10 +247,10 @@ $ui-button-margin-bottom: rem(5px) !default;
 $ui-button-margin-right: rem(8px) !default;
 $ui-button-focus-width: rem(3px) !default;
 $ui-button-focus-opacity: .25 !default;
-$ui-button-small-font-size: $ui-size-7 !default;
+$ui-button-small-font-size: $ui-size-2 !default;
 $ui-button-small-padding-x: rem(12px) !default;
 $ui-button-small-padding-y: rem(6px) !default;
-$ui-button-large-font-size: $ui-size-5 !default;
+$ui-button-large-font-size: $ui-size-4 !default;
 $ui-button-large-padding-x: rem(19px) !default;
 $ui-button-large-padding-y: rem(12px) !default;
 $ui-button-rounded-radius: rem(20px) !default;
@@ -250,15 +262,20 @@ $ui-button-large-rounded-radius: rem(26px) !default;
 // 
 $ui-name-navbar: "navbar" !default;
 $ui-navbar-minheight: rem(60px) !default;
-$ui-navbar-item-padding-x: rem(12px) !default;
+$ui-navbar-item-padding-x: rem(15px) !default;
 $ui-navbar-item-padding-y: rem(10px) !default;
 $ui-navbar-color: $ui-color !default;
 $ui-navbar-item-hover-bgc: $ui-gray-lightest !default;
 $ui-navbar-shadow: rem(3px) 0 rem(5px) 0 rgba(0,0,0,.15) !default;
 $ui-navbar-link-arrow-size: rem(10px) !default;
-$ui-navbar-dropdown-shadow: 0px 0px 25px rgba(40, 47, 60, 0.05), 0px 20px 25px rgba(40, 47, 60, 0.05), 0px 3px 4px rgba(40, 47, 60, 0.05);
-$ui-navbar-dropdown-padding: rem(5px) 0;
-$ui-navbar-dropdown-font-size: rem(14px);
+$ui-navbar-dropdown-shadow: 0px 0px 25px rgba(40, 47, 60, 0.05), 0px 20px 25px rgba(40, 47, 60, 0.05), 0px 3px 4px rgba(40, 47, 60, 0.05) !default;
+$ui-navbar-dropdown-padding: rem(5px) 0 !default;
+$ui-navbar-dropdown-font-size: rem(14px) !default;
+
+//
+// Hero
+//
+$ui-name-hero: "hero" !default;
 
 //
 // Radius
@@ -280,14 +297,16 @@ $ui-icon-spacer: rem(8px) !default;
 // 
 $ui-name-has-bgc: "bgc" !default;
 
+$ui-base-spacer: rem(5px) !default;
+
 $ui-name-has-padding: "p" !default;
 $ui-name-has-padding-top: "t" !default;
 $ui-name-has-padding-left: "l" !default;
 $ui-name-has-padding-right: "r" !default;
-$ui-name-has-padding-bottom: "r" !default;
+$ui-name-has-padding-bottom: "b" !default;
 
 $ui-name-has-margin: "m" !default;
 $ui-name-has-margin-top: "t" !default;
 $ui-name-has-margin-left: "l" !default;
 $ui-name-has-margin-right: "r" !default;
-$ui-name-has-margin-bottom: "r" !default;
+$ui-name-has-margin-bottom: "b" !default;
