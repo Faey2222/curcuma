@@ -134,7 +134,8 @@
     padding-top: var(--ui-navbar-minheight);
   }
 
-  > .#{$ui-name-container} {
+  > .#{$ui-name-container},
+  .#{$ui-name-container}-fluid {
     display: flex;
     align-items: stretch;
     width: 100%;
