@@ -1,0 +1,52 @@
+.#{$ui-name-hero} {
+  overflow: hidden;
+  background-color: var(--ui-gray-lightest);
+  padding: var(--ui-gutter) 0;
+
+  $color-types: $ui-colors $ui-shades;
+  @each $color-type in $color-types {
+    @each $variation in $color-type {
+      $key: nth(map-keys($color-type), index($color-type, $variation));
+      $val: map-get(map-get($color-type, $key), name);
+      $var: map-get(map-get($color-type, $key), var);
+
+      &.is-#{$key} {
+        color: find-color($var);
+        background-color: var(--#{$val}) !important;
+
+        &.has-gradient {
+          @if $ui-gradient == 'dark' {
+            background-image: linear-gradient(to right, var(--#{$val}), var(--#{$val}-dark), var(--#{$val}-darker));
+          } @else {
+            background-image: linear-gradient(to right, var(--#{$val}), var(--#{$val}-light), var(--#{$val}-lighter));
+          }
+          background-size: 100%;
+
+          &-down {
+            @if $ui-gradient == 'dark' {
+              background-image: linear-gradient(to bottom, var(--#{$val}), var(--#{$val}-dark), var(--#{$val}-darker));
+            } @else {
+              background-image: linear-gradient(to bottom, var(--#{$val}), var(--#{$val}-light), var(--#{$val}-lighter));
+            }
+          }
+
+          &-left {
+            @if $ui-gradient == 'dark' {
+              background-image: linear-gradient(to left, var(--#{$val}), var(--#{$val}-dark), var(--#{$val}-darker));
+            } @else {
+              background-image: linear-gradient(to left, var(--#{$val}), var(--#{$val}-light), var(--#{$val}-lighter));
+            }
+          }
+
+          &-up {
+            @if $ui-gradient == 'dark' {
+              background-image: linear-gradient(to top, var(--#{$val}), var(--#{$val}-dark), var(--#{$val}-darker));
+            } @else {
+              background-image: linear-gradient(to top, var(--#{$val}), var(--#{$val}-light), var(--#{$val}-lighter));
+            }
+          }
+        }
+      }
+    }
+  }
+}
