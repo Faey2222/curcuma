@@ -1,54 +1,86 @@
-.has-#{$ui-name-has-padding} {
-  @each $variation in $ui-sizes {
-    $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
-    $val: map-get(map-get($ui-sizes, $key), name);
+@for $i from 0 through 10 {
+  .has-#{$ui-name-has-padding} {
+    &--#{$i} {
+      padding: calc(var(--ui-base-spacer) * #{$i}) !important;
+    }
+  }
 
-    &--#{$key} {
-      padding: var(--#{$val}) !important;
+  .has-#{$ui-name-has-padding}-#{$ui-name-has-padding-top} {
+    &--#{$i} {
+      padding-top: calc(var(--ui-base-spacer) * #{$i}) !important;
+    }
+  }
+
+  .has-#{$ui-name-has-padding}-#{$ui-name-has-padding-right} {
+    &--#{$i} {
+      padding-right: calc(var(--ui-base-spacer) * #{$i}) !important;
+    }
+  }
+
+  .has-#{$ui-name-has-padding}-#{$ui-name-has-padding-bottom} {
+    &--#{$i} {
+      padding-bottom: calc(var(--ui-base-spacer) * #{$i}) !important;
+    }
+  }
+
+  .has-#{$ui-name-has-padding}-#{$ui-name-has-padding-left} {
+    &--#{$i} {
+      padding-left: calc(var(--ui-base-spacer) * #{$i}) !important;
     }
   }
 }
 
-.has-#{$ui-name-has-padding}-#{$ui-name-has-padding-top} {
-  @each $variation in $ui-sizes {
-    $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
-    $val: map-get(map-get($ui-sizes, $key), name);
+// .has-#{$ui-name-has-padding} {
+//   @each $variation in $ui-sizes {
+//     $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
+//     $val: map-get(map-get($ui-sizes, $key), name);
 
-    &--#{$key} {
-      padding-top: var(--#{$val}) !important;
-    }
-  }
-}
+//     &--#{$key} {
+//       padding: var(--#{$val}) !important;
+//     }
+//   }
+// }
 
-.has-#{$ui-name-has-padding}-#{$ui-name-has-padding-left} {
-  @each $variation in $ui-sizes {
-    $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
-    $val: map-get(map-get($ui-sizes, $key), name);
+// .has-#{$ui-name-has-padding}-#{$ui-name-has-padding-top} {
+//   @each $variation in $ui-sizes {
+//     $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
+//     $val: map-get(map-get($ui-sizes, $key), name);
 
-    &--#{$key} {
-      padding-left: var(--#{$val}) !important;
-    }
-  }
-}
+//     &--#{$key} {
+//       padding-top: var(--#{$val}) !important;
+//     }
+//   }
+// }
 
-.has-#{$ui-name-has-padding}-#{$ui-name-has-padding-right} {
-  @each $variation in $ui-sizes {
-    $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
-    $val: map-get(map-get($ui-sizes, $key), name);
+// .has-#{$ui-name-has-padding}-#{$ui-name-has-padding-left} {
+//   @each $variation in $ui-sizes {
+//     $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
+//     $val: map-get(map-get($ui-sizes, $key), name);
 
-    &--#{$key} {
-      padding-right: var(--#{$val}) !important;
-    }
-  }
-}
+//     &--#{$key} {
+//       padding-left: var(--#{$val}) !important;
+//     }
+//   }
+// }
 
-.has-#{$ui-name-has-padding}-#{$ui-name-has-padding-bottom} {
-  @each $variation in $ui-sizes {
-    $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
-    $val: map-get(map-get($ui-sizes, $key), name);
+// .has-#{$ui-name-has-padding}-#{$ui-name-has-padding-right} {
+//   @each $variation in $ui-sizes {
+//     $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
+//     $val: map-get(map-get($ui-sizes, $key), name);
 
-    &--#{$key} {
-      padding-bottom: var(--#{$val}) !important;
-    }
-  }
-}
+//     &--#{$key} {
+//       padding-right: var(--#{$val}) !important;
+//     }
+//   }
+// }
+
+// .has-#{$ui-name-has-padding}-#{$ui-name-has-padding-bottom} {
+//   @each $variation in $ui-sizes {
+//     $key: nth(map-keys($ui-sizes), index($ui-sizes, $variation));
+//     $val: map-get(map-get($ui-sizes, $key), name);
+
+//     &--#{$key} {
+//       padding-bottom: var(--#{$val}) !important;
+//     }
+//   }
+// }
