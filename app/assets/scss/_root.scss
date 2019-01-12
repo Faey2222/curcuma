@@ -41,7 +41,7 @@
   --ui-family-monospace: #{$ui-family-monospace};
   --ui-family-render-mode: #{$ui-render-mode};
 
-  --ui-base-size: #{$ui-size-6};
+  --ui-base-size: #{$ui-base-size};
   --ui-size-1: #{$ui-size-1};
   --ui-size-2: #{$ui-size-2};
   --ui-size-3: #{$ui-size-3};
@@ -50,6 +50,8 @@
   --ui-size-6: #{$ui-size-6};
   --ui-size-7: #{$ui-size-7};
   --ui-size-8: #{$ui-size-8};
+  --ui-size-9: #{$ui-size-9};
+  --ui-size-10: #{$ui-size-10};
 
   --ui-weight-light: #{$ui-weight-light};
   --ui-weight-normal: #{$ui-weight-normal};
@@ -94,4 +96,7 @@
 
   // Icons
   --ui-icon-spacer: #{$ui-icon-spacer};
+
+  // Utilities
+  --ui-base-spacer: #{$ui-base-spacer};
 }
