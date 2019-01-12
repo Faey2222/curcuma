@@ -1,13 +1,7 @@
 //
 // Typography
 //
-@for $i from 1 through 7 {
-  @if $i != 7 {
-    h#{$i} {
-      font-size: var(--ui-size-#{$i});
-      font-weight: var(--ui-weight-bold);
-    }
-  }
+@for $i from 1 through length($ui-sizes) {
   .is-size-#{$i} {
     font-size: var(--ui-size-#{$i}) !important;
 
@@ -17,6 +11,13 @@
           font-size: var(--ui-size-#{$i}) !important;
         }
       }
+    }
+  }
+
+  @if $i >= $ui-headline-start-at - 6 AND $i < $ui-headline-start-at {
+    h#{$i - 1} {
+      font-size: var(--ui-size-#{length($ui-sizes) - $i});
+      font-weight: var(--ui-weight-bold);
     }
   }
 }
@@ -34,4 +35,13 @@ $weights: (light, normal, medium, semibold, bold);
       }
     }
   }
+}
+
+.is-lead {
+  font-size: var(--ui-size-4);
+  font-weight: var(--ui-weight-light);
+}
+
+.is-muted {
+  opacity: 0.5;
 }
