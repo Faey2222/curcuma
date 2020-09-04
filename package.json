@@ -23,7 +23,7 @@
     "grunt-sass": "^3.0.2",
     "jit-grunt": "^0.10.0",
     "load-grunt-config": "^0.19.2",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.13.1",
     "pixrem": "^4.0.1",
     "time-grunt": "^1.4.0"
   },
